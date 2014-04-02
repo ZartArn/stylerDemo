@@ -1,0 +1,134 @@
+{
+    "Variables": {
+        "normalColor"       : [37, 183, 217],
+        "activeColor"       : [240, 40, 153],
+        "backColor"         : [239, 239, 239],
+        "h1Color"           : [85, 85, 85],
+        "textColor"         : [0, 0, 0],
+        "text2Color"        : [58, 80, 89],
+    },
+    
+    "UITabBar": {
+        "barTintColor"  : "$normalColor",
+        "tintColor"     : "white",
+    },
+
+    "UITabBarItem": {
+        "titleTextAttributes:normal": {
+            "textColor": "white",
+        },
+        "titleTextAttributes:selected": {
+            "textColor": [0, 66, 95],
+        }
+    },
+    
+    "UINavigationBar": {
+        "barTintColor": "$normalColor",
+        "titleTextAttributes": {
+            "textColor": "white"
+        },
+    },
+
+
+    
+    
+    
+    "ButtonStyle1": {
+        "titleColor:normal"             : "white",
+        "titleColor:highlighted"        : "white",
+        "backgroundImage:normal"        : ["button-blue.png",   [0, 2, 0, 2]],
+        "backgroundImage:highlighted"   : ["button-active.png", [0, 2, 0, 2]],
+        "titleEdgeInsets"               : [0, 5, 0, 5],
+    },
+
+    "ButtonStyle2": {
+        "titleColor:normal"             : "white",
+        "titleColor:highlighted"        : "white",
+        "backgroundImage:normal"        : ["button-gray",   [0, 2, 0, 2]],
+        "backgroundImage:highlighted"   : ["button-active", [0, 2, 0, 2]],
+        "titleEdgeInsets"               : [0, 5, 0, 5],
+    },
+
+    "ButtonStyle3": {
+        "titleColor:normal"             : "white",
+        "titleColor:highlighted"        : "white",
+        "backgroundImage:normal"        : ["button-active",   [0, 2, 0, 2]],
+        "backgroundImage:highlighted"   : ["button-blue", [0, 2, 0, 2]],
+        "titleEdgeInsets"               : [0, 5, 0, 5],
+    },
+
+    "ButtonStyle4": {
+        "titleColor:normal"             : "white",
+        "titleColor:highlighted"        : "white",
+        "backgroundImage:normal"        : ["button-blue.png",   [0, 2, 0, 2]],
+        "backgroundImage:highlighted"   : ["button-active.png", [0, 2, 0, 2]],
+        "titleEdgeInsets"               : [0, 5, 0, 5],
+        "titleFont"                     : 13,
+        "spacing"                       : 3,
+    },
+    
+    
+    
+    
+    
+    
+    
+    "CategoryHLabel"   : {
+        "font"          : 18,
+        "color"         : "$h1Color",
+        "textAlignment" : "center",
+    },
+    
+    "NameHLabel" : {
+        "font"              : 16,
+        "color"             : "$text2Color",
+        "textAlignment"     : "center",
+        "-lineBreakMode"    : "",
+        "numberOfLines"     : 0,
+    },
+
+    "BrandHLabel" : {
+        "font"              : 18,
+        "color"             : "$normalColor",
+        "textAlignment"     : "center",
+        "-lineBreakMode"    : "",
+        "numberOfLines"     : 0,
+    },
+    
+    "StripHLabel" : {
+        "font"              : 16,
+        "color"             : "white",
+        "textAlignment"     : "center",
+        "-lineBreakMode"    : "",
+        "numberOfLines"     : 2,
+    },
+
+    
+    "TextMultiLabel" : {
+        "font"              : 16,
+        "color"             : "$text2Color",
+        "textAlignment"     : "left",
+        "-lineBreakMode"    : "",
+        "numberOfLines"     : 0,
+    },
+
+    "titleItem" : {
+        "font"              : 14,
+        "color"             : "$textColor",
+        "textAlignment"     : "center",
+    },
+
+    "priceLabel" : {
+        "font"              : 16,
+        "color"             : "$textColor",
+        "textAlignment"     : "center",
+    },
+
+    "titleCat" : {
+        "font"              : 12,
+        "color"             : "white",
+        "textAlignment"     : "center",
+    },
+    
+    
+}

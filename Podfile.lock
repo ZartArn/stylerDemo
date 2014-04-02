@@ -1,0 +1,13 @@
+PODS:
+  - MZAppearance (1.1.1)
+  - UISS (1.1.1)
+
+DEPENDENCIES:
+  - MZAppearance
+  - UISS
+
+SPEC CHECKSUMS:
+  MZAppearance: 8b02683f0019f725557ae9839ed6cab153fff669
+  UISS: 21e28c8c0c2c0bc4634025b8c4484df7ffe6808d
+
+COCOAPODS: 0.31.1
