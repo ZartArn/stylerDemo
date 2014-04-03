@@ -7,13 +7,42 @@
 //
 
 #import "AppDelegate.h"
+#import "StyleButtonsController.h"
+#import "StyleLablesController.h"
+#import "StyleCellController.h"
+
+@interface AppDelegate()
+
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.uiss = [UISS configureWithDefaultJSONFile];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"barButtons" ofType:@"json"];
+//    [UISS configureWithJSONFilePath:path];
+    self.uiss.statusWindowEnabled = YES;
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    StyleButtonsController *v1 = [[StyleButtonsController alloc] init];
+    v1.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemBookmarks tag:0];
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:v1];
+
+    StyleLablesController *v2 = [[StyleLablesController alloc] init];
+    v2.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:1];
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:v2];
+
+    StyleCellController *v3 = [[StyleCellController alloc] init];
+    v3.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:2];
+    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:v3];
+    
+    UITabBarController *tab = [[UITabBarController alloc] init];
+    tab.viewControllers = @[nav1, nav2, nav3];
+    self.window.rootViewController = tab;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

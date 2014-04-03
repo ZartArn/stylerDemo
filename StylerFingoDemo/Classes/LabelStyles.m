@@ -44,7 +44,7 @@
 
 @end
 
-@implementation LabelHeaderCategory
+@implementation CategoryHLabel
 @end
 
 @implementation NameHLabel
@@ -54,4 +54,15 @@
 @end
 
 @implementation LabelHeader2
+
+- (void)drawTextInRect:(CGRect)rect {
+    return [super drawTextInRect:UIEdgeInsetsInsetRect(rect, self.margins)];
+}
+
+@end
+
+@implementation LabelHeader3
+@end
+
+@implementation TextMultiLabel
 @end

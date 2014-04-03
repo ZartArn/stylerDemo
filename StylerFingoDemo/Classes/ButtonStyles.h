@@ -35,3 +35,6 @@
 
 @interface ButtonStyle5 : ButtonStyle0
 @end
+
+@interface NavButton : ButtonStyle0
+@end

@@ -29,7 +29,26 @@
         },
     },
 
+    "UIBarButtonItem": {
+        "backgroundImage:normal:default"        : ["back-catalog2.png", [12.5, 2.5, 12.5, 2.5]],
+        "backgroundImage:highlighted:default"   : ["back-catalog-active2.png", [12.5, 2.5, 12.5, 2.5]],
+        "titleTextAttributes:normal"            :  {
+            "textColor": "white",
+        },
+        "titleTextAttributes:highlighted"       : {
+            "textColor": "white",
+        }
+    },
 
+    "NavButton": {
+        "backgroundImage:normal"        : ["back-catalog2.png", [12.5, 2.5, 12.5, 2.5]],
+        "backgroundImage:highlighted"   : ["back-catalog-active2.png", [12.5, 2.5, 12.5, 2.5]],
+        "backgroundImage:selected"      : ["back-catalog-active2.png", [12.5, 2.5, 12.5, 2.5]],
+        "titleColor:normal"             : "white",
+        "titleColor:highlighted"        : "white",
+        "titleEdgeInsets"               : [0, 5, 0, 5],
+        "titleFont"                     : 14,
+    },
     
     
     
@@ -69,14 +88,11 @@
     
     
     
-    
-    
-    
-    
     "CategoryHLabel"   : {
-        "font"          : 18,
-        "color"         : "$h1Color",
-        "textAlignment" : "center",
+        "font"              : 18,
+        "color"             : "$h1Color",
+        "textAlignment"     : "center",
+        "backgroundColor"   : "$backColor",
     },
     
     "NameHLabel" : {
@@ -95,40 +111,35 @@
         "numberOfLines"     : 0,
     },
     
-    "StripHLabel" : {
-        "font"              : 16,
+    "LabelHeader2" : {
+        "font"              : 18,
+        "color"             : "white",
+        "textAlignment"     : "left",
+        "margins"           : [0, 45, 0, 0],
+        "backgroundColor"   : "$activeColor"
+    },
+
+    "LabelHeader3" : {
+        "font"              : 18,
         "color"             : "white",
         "textAlignment"     : "center",
-        "-lineBreakMode"    : "",
-        "numberOfLines"     : 2,
+        "backgroundColor"   : "$activeColor"
     },
+
+    
+    
+    "exampleCell" : {
+        "textNormalColor"       : "$textColor",
+        "textHighlitedColor"    : "$activeColor",
+        "-textFont"              : 12,
+    },
+    
 
     
     "TextMultiLabel" : {
         "font"              : 16,
         "color"             : "$text2Color",
         "textAlignment"     : "left",
-        "-lineBreakMode"    : "",
-        "numberOfLines"     : 0,
     },
 
-    "titleItem" : {
-        "font"              : 14,
-        "color"             : "$textColor",
-        "textAlignment"     : "center",
-    },
-
-    "priceLabel" : {
-        "font"              : 16,
-        "color"             : "$textColor",
-        "textAlignment"     : "center",
-    },
-
-    "titleCat" : {
-        "font"              : 12,
-        "color"             : "white",
-        "textAlignment"     : "center",
-    },
-    
-    
 }

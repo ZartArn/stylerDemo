@@ -7,8 +7,6 @@
 //
 
 #import "ButtonStyles.h"
-#import "UIColor+tools.h"
-#import "FingoStyleConfig.h"
 
 @implementation ButtonStyle0
 
@@ -90,4 +88,7 @@
 @end
 
 @implementation ButtonStyle5
+@end
+
+@implementation NavButton
 @end
