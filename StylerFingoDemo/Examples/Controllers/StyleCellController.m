@@ -9,6 +9,7 @@
 #import "StyleCellController.h"
 #import "exampleCell.h"
 #import "LabelStyles.h"
+#import "exampleCell-2.h"
 
 @interface StyleCellController ()
 
@@ -27,7 +28,6 @@
     tableView.dataSource = self;
     [tableView registerClass:[exampleCell class] forCellReuseIdentifier:@"Cell"];
     [self.view addSubview:tableView];
-    
 }
 
 #pragma mark - UITableViewDataSource
@@ -66,10 +66,28 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell;
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     cell.textLabel.text = [NSString stringWithFormat:@"Text %li", (long)indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (cell.selected) {
+        NSLog(@"Tap");
+        NSLog(@"mask cell %i", cell.layer.masksToBounds);
+        NSLog(@"mask cellscrollview %i", [(UIView *)[[cell subviews] objectAtIndex:0] layer].masksToBounds);
+        for (UIView *v in [[[cell subviews] objectAtIndex:0] subviews]) {
+            NSLog(@"%@", v);
+            NSLog(@"hidden %i", v.hidden);
+            NSLog(@"alpha %f", v.alpha);
+            NSLog(@"mask %i", v.layer.masksToBounds);
+        }
+        NSLog(@"Tap");
+    }
 }
 
 @end
